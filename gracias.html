@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>¡Bienvenida al reto! · Tovlov</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="funnel.css">
+<script src="config.js"></script>
+<style>
+.n{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.n:last-of-type{border:0}
+.n b.c{width:44px;height:44px;border-radius:50%;background:var(--blush);color:var(--ruby);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:24px}
+.n p{margin:2px 0 0;font-size:14.5px;color:#5c4247}
+</style>
+</head>
+<body>
+<div class="top">
+  <div class="wrap">
+    <div class="ok">✓ Todo listo</div>
+    <h1>Bienvenida al <em>Reto Calma Magnética</em></h1>
+    <p>Hoy empieza tu Día 1. Así entras:</p>
+  </div>
+</div>
+<div class="wrap">
+  <div class="box">
+    <div class="n"><b class="c">1</b><div><b>Revisa tu correo</b><p>Te enviamos el acceso al correo con el que pagaste. Si no lo ves en 5 minutos, busca en “Promociones” o “Spam”.</p></div></div>
+    <div class="n"><b class="c">2</b><div><b>Entra a la plataforma con tu correo</b><p>Sin contraseñas: escribe tu correo y te llega un enlace mágico para entrar.</p></div></div>
+    <div class="n"><b class="c">3</b><div><b>Empieza el Día 1 hoy mismo</b><p>Son 10 minutos. Lo más importante del reto es no esperar al “lunes”.</p></div></div>
+    <a class="btn" id="go" href="#" style="margin-top:16px">Entrar a mi reto →</a>
+    <p class="note">¿Dudas o problemas con tu acceso? Escríbenos a <a href="mailto:soporte@tovlov.com">soporte@tovlov.com</a>.</p>
+  </div>
+  <div class="box" style="margin-top:0">
+    <h2 style="font-size:26px">Tu tarea de hoy, antes de entrar</h2>
+    <p>La próxima vez que sientas el impulso de escribirle, haz esto: <b>pon el celular boca abajo, inhala en 4, sostén en 4, exhala en 6</b>, tres veces. Después pregúntate: <i>“¿esto me acerca a mí o me aleja de mí?”</i></p>
+    <p>Eso es el principio del Protocolo SOS que vas a aprender el Día 2.</p>
+  </div>
+</div>
+<footer>© Tovlov · <a href="terminos.html">Términos</a><a href="privacidad.html">Privacidad</a><a href="reembolso.html">Reembolsos</a></footer>
+<script>
+  const F = window.FUNNEL || {};
+  document.getElementById('go').href = F.klazeUrl ? F.klazeUrl.replace(/\/$/,'') + '/login' : '#';
+  if (F.metaPixelId) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', F.metaPixelId); fbq('track','PageView');
+  }
+</script>
+</body>
+</html>

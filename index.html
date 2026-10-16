@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>¿Por qué se aleja? · Test de los 4 Cuadrantes · Malka · Tovlov</title>
+<meta name="description" content="Descubre en 2 minutos por qué se aleja justo cuando más lo quieres. Test gratuito de los 4 Cuadrantes del Método MAGNA de Malka.">
+<meta property="og:title" content="¿Por qué se aleja justo cuando más lo quieres?">
+<meta property="og:description" content="Test gratuito de 2 minutos. Descubre tu cuadrante y qué siente él contigo.">
+<meta name="theme-color" content="#3a0a14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="config.js"></script>
+<style>
+:root{
+  --ruby:#b3122e; --ruby-d:#8c0c22; --wine:#3a0a14; --wine2:#52101f; --oxblood:#2a060e;
+  --blush:#f7e6e1; --cream:#fdf7f3; --rose:#e9b8ae; --ink:#2b1418; --muted:#7d6267; --line:#ecd8d2;
+  --ok:#1f7a55; --gold:#c9a57a;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Montserrat",-apple-system,Helvetica,Arial,sans-serif;
+  --r:18px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55}
+body{min-height:100vh;overflow-x:hidden}
+button{font-family:inherit;cursor:pointer}
+img{max-width:100%;display:block}
+a{color:var(--ruby)}
+.wrap{max-width:560px;margin:0 auto;padding:0 20px}
+.wide{max-width:980px;margin:0 auto;padding:0 20px}
+.serif{font-family:var(--serif)}
+.screen{display:none;min-height:100vh;animation:in .45s ease both}
+.screen.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ---------- BOTONES ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;background:var(--ruby);color:#fff;font-weight:700;font-size:16px;letter-spacing:.2px;padding:18px 30px;box-shadow:0 10px 28px -10px rgba(179,18,46,.7);transition:transform .15s,background .2s;text-decoration:none;width:100%}
+.btn:hover{background:var(--ruby-d)}
+.btn:active{transform:scale(.98)}
+.btn small{font-weight:500;opacity:.85}
+.btn.pulse{animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 10px 28px -10px rgba(179,18,46,.7),0 0 0 0 rgba(179,18,46,.35)}50%{box-shadow:0 10px 28px -10px rgba(179,18,46,.7),0 0 0 12px rgba(179,18,46,0)}}
+.ghost{background:none;border:0;color:var(--muted);font-size:14px;text-decoration:underline;padding:10px}
+
+/* ---------- HERO ---------- */
+#s-hero{background:radial-gradient(120% 80% at 50% 0%,#5a1222 0%,var(--wine) 45%,var(--oxblood) 100%);color:#fff;position:relative;overflow:hidden}
+#s-hero:before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.05'/%3E%3C/svg%3E");pointer-events:none}
+.brandbar{display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#e8c9c2}
+.brandbar{gap:12px}
+.brandbar span{text-align:right}
+.brandbar b{font-family:var(--serif);font-size:22px;letter-spacing:1px;text-transform:none;color:#fff;font-weight:600}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:26px;padding:6px 0 46px;position:relative}
+.eyebrow{display:inline-block;font-size:11px;letter-spacing:2.6px;text-transform:uppercase;font-weight:600;color:var(--rose);border:1px solid rgba(233,184,174,.35);padding:6px 12px;border-radius:999px}
+h1.hero-h{font-family:var(--serif);font-weight:600;font-size:44px;line-height:1.02;margin:16px 0 14px;letter-spacing:-.5px}
+h1.hero-h em{color:var(--rose);font-style:italic}
+.hero-sub{color:#ead6d1;font-size:16.5px;margin:0 0 24px}
+.trust{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:12.5px;color:#d9bdb6}
+.trust span:before{content:"✓ ";color:var(--rose)}
+
+/* teléfono */
+.phone{width:262px;max-width:100%;margin:0 auto;background:#120408;border-radius:38px;padding:12px;box-shadow:0 40px 80px -30px rgba(0,0,0,.8),inset 0 0 0 2px #3b1820}
+.phone-in{color:var(--ink);background:#efe6dc;border-radius:28px;overflow:hidden;height:420px;position:relative;font-size:13px}
+.chat-top{background:#2a1418;color:#fff;padding:26px 14px 10px;display:flex;align-items:center;gap:10px}
+.chat-top .av{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#6b4a3d,#a07e6b)}
+.chat-top b{display:block;font-size:14px}
+.chat-top small{color:#c9b3ae;font-size:11px}
+.msgs{padding:14px 10px;display:flex;flex-direction:column;gap:7px}
+.m{max-width:80%;padding:7px 10px 16px;border-radius:10px;position:relative;opacity:0;transform:translateY(6px);animation:pop .4s ease forwards;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.m.him{background:#fff;align-self:flex-start;border-top-left-radius:2px}
+.m.me{background:#ffd9d2;align-self:flex-end;border-top-right-radius:2px}
+.m time{position:absolute;right:8px;bottom:3px;font-size:9.5px;color:#8b7a76}
+.m.me time:after{content:" ✓✓";color:#4fa3e0;letter-spacing:-2px}
+@keyframes pop{to{opacity:1;transform:none}}
+.m:nth-child(1){animation-delay:.3s}.m:nth-child(2){animation-delay:.9s}.m:nth-child(3){animation-delay:1.7s}.m:nth-child(4){animation-delay:2.6s}.m:nth-child(5){animation-delay:3.4s}.m:nth-child(6){animation-delay:4.2s}
+.seen{align-self:flex-end;font-size:10.5px;color:#7d6c68;opacity:0;animation:pop .4s 5s forwards}
+.typing{position:absolute;left:10px;bottom:14px;background:#fff;border-radius:12px;padding:8px 12px;display:flex;gap:4px;opacity:0;animation:typ 6s 5.6s infinite}
+.typing i{width:6px;height:6px;border-radius:50%;background:#9c8c88;animation:dot 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dot{50%{transform:translateY(-3px)}}
+@keyframes typ{0%,8%{opacity:0}12%,30%{opacity:1}36%,100%{opacity:0}}
+.phone-cap{text-align:center;font-family:var(--serif);font-style:italic;color:#e8c9c2;margin-top:14px;font-size:17px}
+
+.strip{background:var(--blush);padding:34px 0;text-align:center}
+.strip p{font-family:var(--serif);font-size:24px;line-height:1.25;margin:0;color:var(--wine)}
+.strip p em{color:var(--ruby)}
+
+/* ---------- QUIZ ---------- */
+#s-quiz{background:var(--cream)}
+.qtop{position:sticky;top:0;background:rgba(253,247,243,.94);backdrop-filter:blur(8px);z-index:5;padding:14px 0 12px}
+.qtop .row{display:flex;align-items:center;justify-content:space-between;font-size:12px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.back{background:none;border:0;color:var(--muted);font-size:20px;padding:0 6px 0 0;line-height:1}
+.bar{height:6px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ruby),#e0526a);border-radius:6px;transition:width .5s ease}
+.qbody{padding:22px 0 60px}
+.qkick{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--ruby);font-weight:700;margin-bottom:8px}
+.qtitle{font-family:var(--serif);font-size:31px;line-height:1.12;margin:0 0 8px;font-weight:600;color:var(--wine)}
+.qhelp{color:var(--muted);font-size:14.5px;margin:0 0 20px}
+.opts{display:flex;flex-direction:column;gap:11px}
+.opt{display:flex;align-items:center;gap:14px;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:16px 16px;font-size:15.5px;color:var(--ink);transition:border-color .15s,transform .15s,background .15s;box-shadow:0 2px 0 rgba(58,10,20,.03)}
+.opt:hover{border-color:var(--rose)}
+.opt.sel{border-color:var(--ruby);background:#fff3f1;transform:scale(.99)}
+.opt .k{flex:0 0 32px;height:32px;border-radius:50%;background:var(--blush);color:var(--wine);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px}
+.opt.sel .k{background:var(--ruby);color:#fff}
+.opt .ic{font-size:22px;flex:0 0 30px;text-align:center}
+
+/* interstitial */
+.inter{background:var(--wine);color:#fff;border-radius:24px;padding:28px 22px;margin-top:8px;position:relative;overflow:hidden}
+.inter:after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(233,184,174,.25),transparent 70%)}
+.inter .qkick{color:var(--rose)}
+.inter h3{font-family:var(--serif);font-size:29px;line-height:1.12;margin:0 0 12px;font-weight:600}
+.inter p{color:#ead6d1;margin:0 0 12px;font-size:15.5px}
+.inter .sig{font-family:var(--serif);font-style:italic;font-size:19px;color:#fff;margin:16px 0 20px;display:flex;align-items:center;gap:12px}
+.inter .sig img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid var(--rose)}
+.cycle{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0 18px}
+.cycle div{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:10px;font-size:13px;line-height:1.3}
+.cycle div b{display:block;color:var(--rose);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:3px}
+.inter .btn{background:#fff;color:var(--wine);box-shadow:none}
+
+/* loading */
+#s-load{background:var(--wine);color:#fff;display:none;align-items:center}
+#s-load.on{display:flex}
+.loader{text-align:center;width:100%;padding:60px 0}
+.ring{width:120px;height:120px;margin:0 auto 26px;position:relative}
+.ring svg{transform:rotate(-90deg)}
+.ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:34px}
+.steps{list-style:none;padding:0;margin:20px auto 0;max-width:320px;text-align:left}
+.steps li{padding:8px 0;color:#bfa29c;font-size:14.5px;transition:color .3s}
+.steps li:before{content:"○";display:inline-block;width:24px;color:#bfa29c}
+.steps li.done{color:#fff}
+.steps li.done:before{content:"✓";color:var(--rose)}
+
+/* lead */
+#s-lead{background:var(--cream)}
+.lead-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px 22px;margin:28px 0 40px;box-shadow:0 30px 60px -40px rgba(58,10,20,.35)}
+.lock{width:58px;height:58px;border-radius:50%;background:var(--blush);display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:14px}
+.lead-card h2{font-family:var(--serif);font-size:32px;line-height:1.08;margin:0 0 8px;color:var(--wine)}
+.field{margin:12px 0}
+.field label{display:block;font-size:12.5px;font-weight:600;color:var(--muted);margin-bottom:6px;letter-spacing:.3px}
+.field input{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:15px 14px;font-size:16px;font-family:inherit;background:var(--cream);color:var(--ink)}
+.field input:focus{outline:none;border-color:var(--ruby);background:#fff}
+.consent{display:flex;gap:10px;font-size:12.5px;color:var(--muted);margin:14px 0 18px;align-items:flex-start}
+.consent input{margin-top:3px;accent-color:var(--ruby)}
+.err{color:var(--ruby);font-size:13px;min-height:18px}
+
+/* ---------- RESULTADO ---------- */
+#s-result{background:var(--cream)}
+.res-hero{background:radial-gradient(120% 90% at 50% 0%,#5a1222,var(--wine) 50%,var(--oxblood));color:#fff;padding:34px 0 56px;text-align:center}
+.res-hero .eyebrow{margin-bottom:8px}
+.res-name{font-size:15px;color:#e8c9c2;margin:14px 0 4px}
+.res-title{font-family:var(--serif);font-size:50px;line-height:1;margin:0 0 10px;font-weight:600}
+.res-tag{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--rose);margin:0 auto;max-width:440px}
+.quad{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:360px;margin:26px auto 0}
+.quad div{border-radius:14px;padding:14px 10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:13px;color:#cdb1ab;position:relative}
+.quad div b{display:block;font-family:var(--serif);font-size:19px;color:#e9d6d1;font-weight:600}
+.quad div.base{background:var(--ruby);border-color:#e0526a;color:#fff;box-shadow:0 10px 30px -10px rgba(179,18,46,.9)}
+.quad div.base b{color:#fff}
+.quad div.esc{border:1.5px dashed var(--rose);color:#fff}
+.quad div .lbl{position:absolute;top:-9px;left:50%;transform:translateX(-50%);background:#fff;color:var(--wine);font-size:9.5px;font-weight:700;letter-spacing:1px;padding:2px 8px;border-radius:999px;white-space:nowrap;text-transform:uppercase}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px 20px;margin:-30px 0 18px;position:relative;box-shadow:0 30px 60px -45px rgba(58,10,20,.4)}
+.card + .card{margin-top:0}
+.card h3{font-family:var(--serif);font-size:27px;line-height:1.1;margin:0 0 10px;color:var(--wine)}
+.card p{margin:0 0 12px}
+.gauge{margin:6px 0 14px}
+.gauge .g{height:14px;border-radius:10px;background:linear-gradient(90deg,#76c4a0,#f2c46b 50%,#e0526a 80%,var(--ruby));position:relative}
+.gauge .g i{position:absolute;top:-6px;width:4px;height:26px;background:var(--wine);border-radius:3px;transition:left 1.4s cubic-bezier(.2,.8,.2,1);left:0;box-shadow:0 0 0 3px #fff}
+.gauge .lbls{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:6px}
+.big-n{font-family:var(--serif);font-size:44px;color:var(--ruby);font-weight:700;line-height:1}
+.feels{display:flex;align-items:center;gap:14px;background:var(--blush);border-radius:16px;padding:14px 16px;margin:6px 0 14px}
+.feels b{font-family:var(--serif);font-size:30px;color:var(--ruby);letter-spacing:1px}
+.feels span{font-size:13.5px;color:var(--wine);line-height:1.35}
+ul.signs{padding:0;margin:0;list-style:none}
+ul.signs li{padding:10px 0 10px 30px;border-bottom:1px solid var(--line);position:relative;font-size:15px}
+ul.signs li:last-child{border:0}
+ul.signs li:before{content:"";position:absolute;left:4px;top:17px;width:10px;height:10px;border-radius:50%;background:var(--ruby);box-shadow:0 0 0 4px var(--blush)}
+.trap{background:var(--wine);color:#fff;border:0}
+.trap h3{color:#fff}
+.trap p{color:#ead6d1}
+.loop{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 4px;font-size:13px}
+.loop span{background:rgba(255,255,255,.1);border-radius:999px;padding:6px 10px}
+.loop i{color:var(--rose);font-style:normal}
+.quote{font-family:var(--serif);font-size:23px;line-height:1.25;color:var(--wine);border-left:3px solid var(--ruby);padding-left:16px;margin:8px 0 14px;font-style:italic}
+
+/* VSL */
+.vsl{background:var(--oxblood);padding:40px 0 44px;color:#fff;text-align:center}
+.vsl h2{font-family:var(--serif);font-size:34px;line-height:1.08;margin:8px 0 18px;font-weight:600}
+.vsl h2 em{color:var(--rose)}
+.player{position:relative;aspect-ratio:9/16;max-width:360px;margin:0 auto;border-radius:20px;overflow:hidden;background:#000;box-shadow:0 30px 70px -30px #000}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.poster{position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,6,14,.1),rgba(42,6,14,.85)),url(assets/malka.jpg) center top/cover;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;text-align:left}
+.poster .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;color:var(--ruby);font-size:28px;padding-left:5px}
+.poster b{font-family:var(--serif);font-size:22px;line-height:1.15}
+.poster small{color:#e8c9c2}
+
+/* OFERTA */
+.offer{padding:46px 0 30px;background:var(--cream)}
+.sec-k{font-size:12px;letter-spacing:2.4px;text-transform:uppercase;color:var(--ruby);font-weight:700;text-align:center}
+.sec-h{font-family:var(--serif);font-size:38px;line-height:1.05;text-align:center;margin:8px 0 12px;color:var(--wine);font-weight:600}
+.sec-h em{color:var(--ruby)}
+.sec-p{text-align:center;color:var(--muted);max-width:480px;margin:0 auto 26px}
+.weeks{display:grid;gap:14px}
+.week{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.week-h{display:flex;gap:14px;align-items:center;padding:16px 18px;background:var(--blush)}
+.week-h .n{font-family:var(--serif);font-size:38px;color:var(--ruby);font-weight:700;line-height:1}
+.week-h b{display:block;font-family:var(--serif);font-size:22px;color:var(--wine);line-height:1.1}
+.week-h small{color:var(--muted);font-size:12.5px}
+.days{padding:8px 18px 12px;margin:0;list-style:none;font-size:14.5px}
+.days li{padding:7px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px}
+.days li:last-child{border:0}
+.days li i{font-style:normal;color:var(--ruby);font-weight:700;font-size:12px;min-width:44px;padding-top:2px}
+.how{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:22px 0}
+.how div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;font-size:13.5px}
+.how div b{display:block;font-size:15px;color:var(--wine);margin-bottom:2px}
+.how .ic{font-size:22px;margin-bottom:6px}
+
+.buy{background:#fff;border:2px solid var(--ruby);border-radius:26px;padding:24px 20px;margin:26px 0 10px;box-shadow:0 40px 80px -50px rgba(179,18,46,.8);position:relative}
+.buy .ribbon{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--ruby);color:#fff;font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;padding:5px 14px;border-radius:999px;white-space:nowrap}
+.buy h3{font-family:var(--serif);font-size:30px;text-align:center;margin:8px 0 4px;color:var(--wine);line-height:1.1}
+.incl{list-style:none;padding:0;margin:16px 0}
+.incl li{display:flex;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.incl li span:first-child:before{content:"✓  ";color:var(--ok);font-weight:700}
+.incl li span:last-child{color:var(--muted);white-space:nowrap;font-size:13px}
+.price{text-align:center;margin:14px 0 4px}
+.price b{font-family:var(--serif);font-size:62px;color:var(--ruby);line-height:1}
+.price small{display:block;color:var(--muted);font-size:13px}
+.bump{border:2px dashed var(--ruby);background:#fff8e8;border-radius:16px;padding:14px;margin:18px 0 16px;cursor:pointer;display:block}
+.bump .top{display:flex;gap:12px;align-items:center;font-weight:700;color:var(--wine);font-size:15px}
+.bump input{width:22px;height:22px;accent-color:var(--ruby);flex:0 0 22px}
+.bump .arrow{color:var(--ruby);animation:nudge 1.2s infinite}
+@keyframes nudge{50%{transform:translateX(4px)}}
+.bump p{margin:8px 0 0 34px;font-size:13.5px;color:#5c4247}
+.total{text-align:center;font-size:14px;color:var(--muted);margin:0 0 12px}
+.total b{color:var(--ink)}
+.secure{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:12px}
+.guar{display:flex;gap:16px;align-items:center;background:var(--blush);border-radius:20px;padding:18px;margin:22px 0}
+.seal{flex:0 0 78px;height:78px;border-radius:50%;background:var(--wine);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--serif);line-height:1;box-shadow:0 0 0 4px var(--blush),0 0 0 6px var(--wine)}
+.seal b{font-size:30px}.seal small{font-size:11px;font-family:var(--sans);letter-spacing:1px}
+.guar p{margin:0;font-size:14px;color:var(--wine)}
+
+.malka{display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:center;margin:28px 0}
+.malka img{width:110px;height:140px;object-fit:cover;object-position:top;border-radius:16px}
+.malka h4{font-family:var(--serif);font-size:24px;margin:0 0 4px;color:var(--wine)}
+.malka p{margin:0;font-size:14px;color:#5c4247}
+
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px}
+.faq summary{font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px;color:var(--wine)}
+.faq summary:after{content:"+";color:var(--ruby);font-size:20px;line-height:1}
+.faq details[open] summary:after{content:"–"}
+.faq p{margin:10px 0 0;font-size:14.5px;color:#5c4247}
+footer{text-align:center;font-size:12px;color:var(--muted);padding:30px 20px 110px}
+footer a{color:var(--muted);margin:0 6px}
+.sticky{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(253,247,243,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);z-index:20;transform:translateY(110%);transition:transform .35s}
+.sticky.show{transform:none}
+.sticky .btn{padding:15px 20px;font-size:15px}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--wine);color:#fff;padding:12px 18px;border-radius:12px;font-size:14px;z-index:40;max-width:90%;display:none}
+
+@media(min-width:860px){
+  .hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;padding:30px 0 70px}
+  h1.hero-h{font-size:64px}
+  .btn{width:auto}
+  .hero-grid .btn{padding:20px 38px}
+  .lead-card .btn,.buy .btn,.inter .btn,.qbody .btn{width:100%}
+  .res-title{font-size:64px}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<section id="s-hero" class="screen on">
+  <div class="wide">
+    <div class="brandbar"><b>Tovlov</b><span>Método MAGNA · Malka</span></div>
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Test gratuito · 2 minutos</span>
+        <h1 class="hero-h">¿Por qué se aleja justo cuando <em>más lo quieres?</em></h1>
+        <p class="hero-sub">No es mala suerte. Tampoco es que seas “intensa”. Es un patrón con nombre, y se puede cambiar. Responde 13 preguntas y descubre <b>tu cuadrante</b>, <b>qué siente él contigo</b> y por qué se repite la misma historia.</p>
+        <button class="btn pulse" data-start>Descubrir mi cuadrante <span>→</span></button>
+        <div class="trust"><span>Resultado inmediato</span><span>100% confidencial</span><span>Basado en teoría del apego</span></div>
+      </div>
+      <div>
+        <div class="phone"><div class="phone-in">
+          <div class="chat-top"><div class="av"></div><div><b>Él</b><small>últ. vez hoy a las 9:02 p.m.</small></div></div>
+          <div class="msgs">
+            <div class="m him">Me encantó verte hoy 🙂<time>8:14 p.m.</time></div>
+            <div class="m me">A mí también!! Cuándo repetimos? 😊<time>8:20 p.m.</time></div>
+            <div class="m me">Por cierto el sábado hay un lugar nuevo que se ve increíble<time>9:47 p.m.</time></div>
+            <div class="m me">Bueno sin presión jaja<time>10:58 p.m.</time></div>
+            <div class="m me">Todo bien?<time>11:47 p.m.</time></div>
+            <div class="seen">Visto 11:49 p.m.</div>
+          </div>
+          <div class="typing"><i></i><i></i><i></i></div>
+        </div></div>
+        <div class="phone-cap">“¿Qué hice mal?” — Nada. Pero algo se repite.</div>
+      </div>
+    </div>
+  </div>
+  <div class="strip"><div class="wrap"><p>Si alguna vez releíste una conversación a las 11:47 p.m. buscando <em>el momento exacto en que cambió</em>, este test es para ti.</p></div></div>
+</section>
+
+<!-- ================= QUIZ ================= -->
+<section id="s-quiz" class="screen">
+  <div class="qtop"><div class="wrap">
+    <div class="row"><button class="back" id="qback" aria-label="Atrás">←</button><span id="qcount">1 de 13</span><span>Tovlov</span></div>
+    <div class="bar"><i id="qbar"></i></div>
+  </div></div>
+  <div class="wrap qbody" id="qbody"></div>
+</section>
+
+<!-- ================= CARGANDO ================= -->
+<section id="s-load" class="screen">
+  <div class="wrap loader">
+    <div class="ring">
+      <svg width="120" height="120"><circle cx="60" cy="60" r="52" stroke="rgba(255,255,255,.12)" stroke-width="8" fill="none"/><circle id="ringc" cx="60" cy="60" r="52" stroke="#e9b8ae" stroke-width="8" fill="none" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="327"/></svg>
+      <b id="ringn">0%</b>
+    </div>
+    <div class="serif" style="font-size:28px">Analizando tus respuestas…</div>
+    <ul class="steps" id="steps">
+      <li>Midiendo tu nivel de alarma de apego</li>
+      <li>Ubicando tu cuadrante base</li>
+      <li>Detectando tu cuadrante de escape</li>
+      <li>Traduciendo qué siente él contigo</li>
+      <li>Preparando tu plan personalizado</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= CAPTURA ================= -->
+<section id="s-lead" class="screen">
+  <div class="wrap">
+    <div class="lead-card">
+      <div class="lock">🔒</div>
+      <h2>Tu resultado está listo</h2>
+      <p style="color:var(--muted);margin:0 0 10px">¿A dónde te enviamos tu resultado completo y tu guía <b>“Qué hacer las próximas 72 horas”</b>?</p>
+      <form id="leadf" novalidate>
+        <div class="field"><label for="fn">Tu nombre</label><input id="fn" autocomplete="given-name" placeholder="Ej. Daniela"></div>
+        <div class="field"><label for="fe">Tu correo</label><input id="fe" type="email" autocomplete="email" inputmode="email" placeholder="tucorreo@gmail.com"></div>
+        <div class="field"><label for="fw">WhatsApp (opcional, para recordatorios)</label><input id="fw" type="tel" autocomplete="tel" inputmode="tel" placeholder="+52 55 1234 5678"></div>
+        <label class="consent"><input type="checkbox" id="fc"> <span>Acepto que Tovlov use mis respuestas para darme mi resultado y enviarme contenido por correo y WhatsApp. Puedo darme de baja cuando quiera. <a href="privacidad.html" target="_blank">Aviso de privacidad</a>.</span></label>
+        <div class="err" id="ferr"></div>
+        <button class="btn" type="submit">Ver mi resultado →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESULTADO + OFERTA ================= -->
+<section id="s-result" class="screen">
+  <div class="res-hero">
+    <div class="wrap">
+      <div class="brandbar" style="justify-content:center"><b>Tovlov</b></div>
+      <span class="eyebrow">Tu resultado</span>
+      <p class="res-name" id="rname"></p>
+      <h1 class="res-title" id="rtitle"></h1>
+      <p class="res-tag" id="rtag"></p>
+      <div class="quad" id="rquad"></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="card">
+      <h3>Tu nivel de alarma de apego</h3>
+      <div style="display:flex;align-items:baseline;gap:10px"><span class="big-n" id="ralarm">0</span><span style="color:var(--muted)">/ 100</span></div>
+      <div class="gauge"><div class="g"><i id="rneedle"></i></div><div class="lbls"><span>En calma</span><span>Atenta</span><span>Alarma alta</span></div></div>
+      <p id="ralarmtxt"></p>
+    </div>
+
+    <div class="card">
+      <h3>Por qué se aleja</h3>
+      <div class="feels"><b id="rfeel"></b><span id="rfeeltxt"></span></div>
+      <p id="rwhy"></p>
+      <p id="rsit" style="font-weight:600;color:var(--wine)"></p>
+    </div>
+
+    <div class="card">
+      <h3>Lo que te está pasando (aunque nadie lo vea)</h3>
+      <ul class="signs" id="rsigns"></ul>
+    </div>
+
+    <div class="card trap" id="rtrap" style="display:none">
+      <h3>Alerta: la trampa ansiosa–evitativa</h3>
+      <p>Por lo que respondiste, él muestra rasgos de <b>apego evitativo</b>: cuando las cosas van bien, se enfría. Tu sistema lee esa distancia como peligro y busca cercanía; él lee tu cercanía como presión y pone más distancia. Así funciona el circuito:</p>
+      <div class="loop"><span>Él se enfría</span><i>→</i><span>Tu alarma se dispara</span><i>→</i><span>Buscas cercanía</span><i>→</i><span>Él siente presión</span><i>→</i><span>Se aleja más</span></div>
+      <p style="margin-top:12px">No se rompe escribiendo el mensaje perfecto. Se rompe cuando tú sales del circuito.</p>
+    </div>
+
+    <div class="card">
+      <h3>Lo que NO te va a funcionar</h3>
+      <p class="quote">“No le escribas. Hazte la ocupada. Tárdate el doble en contestar.”</p>
+      <p>Ese consejo te pide que <b>actúes calma mientras por dentro te quemas</b>. Tiene dos finales: o no aguantas el personaje y a la 1 a.m. sale el mensaje de tres párrafos… o lo aguantas y terminas con alguien enamorado de un personaje que tendrás que sostener para siempre.</p>
+      <p><b>La salida no es fingir seguridad. Es construirla</b>, empezando por apagar la alarma de tu sistema nervioso. Para eso existe el reto.</p>
+    </div>
+  </div>
+
+  <!-- VSL -->
+  <div class="vsl" id="vsl">
+    <div class="wrap">
+      <span class="eyebrow">Mensaje de Malka para ti</span>
+      <h2>Mira este video antes de volver a <em>escribirle</em></h2>
+      <div class="player" id="player">
+        <div class="poster" id="poster"><div class="play">▶</div><b>Por qué se aleja, y lo único que de verdad lo cambia</b><small>Malka · 9 min</small></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OFERTA -->
+  <div class="offer" id="oferta">
+    <div class="wrap">
+      <div class="sec-k">Tu plan personalizado</div>
+      <h2 class="sec-h">Reto <em>Calma Magnética</em>: 21 días para dejar de perseguir</h2>
+      <p class="sec-sub sec-p">Un reto guiado de 10 minutos al día para apagar la alarma del apego ansioso, entender tu patrón y volver a ti, <b>sin fingir indiferencia ni jugar juegos</b>.</p>
+
+      <div class="weeks">
+        <div class="week">
+          <div class="week-h"><span class="n">1</span><div><b>Apaga la alarma</b><small>Días 1–7 · Regula tu sistema nervioso</small></div></div>
+          <ul class="days">
+            <li><i>Día 1</i>Tu mapa de detonantes: qué te dispara y a qué hora</li>
+            <li><i>Día 2</i>El Protocolo SOS de 90 segundos para el pico de ansiedad</li>
+            <li><i>Día 3</i>La regla de la pausa: nunca escribir desde la alarma</li>
+            <li><i>Día 4</i>Tu celular no es tu termómetro: detox de revisar</li>
+            <li><i>Día 5</i>Cuerpo seguro: respiración y anclaje en 4 minutos</li>
+            <li><i>Día 6</i>Reescribe la historia de las 11:47 p.m.</li>
+            <li><i>Día 7</i>Revisión: tu primera semana sin perseguir</li>
+          </ul>
+        </div>
+        <div class="week">
+          <div class="week-h"><span class="n">2</span><div><b>Entiende tu patrón</b><small>Días 8–14 · De dónde viene tu cuadrante</small></div></div>
+          <ul class="days">
+            <li><i>Día 8</i>La herencia: quién te enseñó a ganarte el amor</li>
+            <li><i>Día 9</i>La trampa ansiosa–evitativa y cómo salirte</li>
+            <li><i>Día 10</i>Presión, muro o juego: lo que él siente contigo</li>
+            <li><i>Día 11</i>Necesidad vs. carencia: cómo pedir sin rogar</li>
+            <li><i>Día 12</i>Tu valor no vive en su respuesta</li>
+            <li><i>Día 13</i>Las 7 señales de un hombre no disponible</li>
+            <li><i>Día 14</i>Revisión: tu patrón, nombrado y visto</li>
+          </ul>
+        </div>
+        <div class="week">
+          <div class="week-h"><span class="n">3</span><div><b>Vuelve a ti</b><small>Días 15–21 · Elige desde la calma</small></div></div>
+          <ul class="days">
+            <li><i>Día 15</i>Una vida en pie: tu agenda antes que su agenda</li>
+            <li><i>Día 16</i>Uno y uno: la regla de la reciprocidad</li>
+            <li><i>Día 17</i>Decirlo directo y con calma (con guiones)</li>
+            <li><i>Día 18</i>Límites sin ultimátums</li>
+            <li><i>Día 19</i>Elegir, en lugar de esperar ser elegida</li>
+            <li><i>Día 20</i>Tu estándar, escrito</li>
+            <li><i>Día 21</i>Carta a tu yo Magnética y tu plan de 90 días</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="how">
+        <div><div class="ic">🎧</div><b>10 min al día</b>Audio o video corto de Malka. Lo escuchas camino al trabajo.</div>
+        <div><div class="ic">📓</div><b>Cuaderno de 21 días</b>Una hoja de trabajo diaria en PDF para imprimir o llenar en el celular.</div>
+        <div><div class="ic">💬</div><b>Recordatorio diario</b>Te llega la lección del día por correo y WhatsApp.</div>
+        <div><div class="ic">🆘</div><b>Audio SOS</b>Para el momento exacto en que quieres escribirle.</div>
+      </div>
+
+      <div class="buy" id="buy">
+        <span class="ribbon">Precio de lanzamiento</span>
+        <h3>Reto Calma Magnética</h3>
+        <ul class="incl">
+          <li><span>21 lecciones diarias de Malka</span><span>audio + video</span></li>
+          <li><span>Cuaderno de trabajo de 21 días</span><span>PDF</span></li>
+          <li><span>Protocolo SOS de 90 segundos</span><span>audio</span></li>
+          <li><span>Tu resultado de cuadrante a fondo</span><span>PDF</span></li>
+          <li><span>Acceso de por vida en la plataforma</span><span>Klaze</span></li>
+        </ul>
+        <div class="price"><b>$<span data-p="front">197</span></b><small>MXN · pago único · menos que una salida al cine</small></div>
+
+        <label class="bump" id="bumpbox">
+          <span class="top"><span class="arrow">➜</span><input type="checkbox" id="bump"> Sí, agrega el Kit SOS por solo $<span data-p="bump">97</span></span>
+          <p><b>“Antes de Escribirle”</b>: 30 guiones de qué decir (y qué no) en 10 situaciones reales (te dejó en visto, desaparece, vuelve como si nada, cancela a última hora, “estoy confundido”…) + 5 audios guiados de 3 minutos para el pico de ansiedad. <b>Solo disponible en esta página.</b></p>
+        </label>
+
+        <p class="total">Total hoy: <b>$<span id="tot">197</span> MXN</b></p>
+        <button class="btn pulse" data-buy>Empezar mi reto hoy →</button>
+        <div class="secure"><span>🔒 Pago seguro con Stripe</span><span>💳 Tarjeta, OXXO</span><span>⚡ Acceso inmediato</span></div>
+      </div>
+
+      <div class="guar">
+        <div class="seal"><b>7</b><small>DÍAS</small></div>
+        <p><b>Garantía de 7 días.</b> Haz los primeros días del reto. Si sientes que no es para ti, escríbenos y te devolvemos tu dinero completo. Sin preguntas incómodas.</p>
+      </div>
+
+      <div class="malka">
+        <img src="assets/malka.jpg" alt="Malka, fundadora de Tovlov">
+        <div><h4>Hola, soy Malka</h4><p>Fundadora de Tovlov, matchmaking humano, y autora de <i>La Mujer Magnética</i>. Acompañando mujeres en procesos de matchmaking, vi el mismo patrón una y otra vez: no era falta de atracción, era la posición desde la que se vinculaban. Este reto es la primera pieza del Método MAGNA.</p></div>
+      </div>
+
+      <div class="faq">
+        <div class="sec-k" style="margin:26px 0 12px">Preguntas frecuentes</div>
+        <details><summary>¿Esto hará que él regrese?</summary><p>No te vamos a prometer eso, y desconfía de quien lo haga. Lo que sí cambia es tu posición: dejas de perseguir y de vivir pendiente del celular. Desde ahí, tú decides con claridad si esa relación te conviene, y muchas mujeres notan que la dinámica cambia cuando ellas cambian.</p></details>
+        <details><summary>¿Sirve si estoy en una relación?</summary><p>Sí. El reto trabaja tu sistema de apego, no una técnica de conquista. Funciona si estás saliendo con alguien, en pareja, después de una ruptura o soltera y cansada de repetir la historia.</p></details>
+        <details><summary>¿Cuánto tiempo necesito al día?</summary><p>Unos 10 minutos: una lección corta y un ejercicio. Si un día no puedes, retomas al siguiente; el acceso es de por vida.</p></details>
+        <details><summary>¿Cómo recibo el reto?</summary><p>Al pagar te llega un correo con tu acceso a la plataforma. Entras con tu mismo correo, sin contraseñas, y empiezas el Día 1 de inmediato.</p></details>
+        <details><summary>¿Sustituye a la terapia?</summary><p>No. Es un programa educativo y de autoconocimiento. Si vives ansiedad intensa, depresión o una relación con violencia, busca acompañamiento profesional. En México puedes llamar gratis a la Línea de la Vida: 800 911 2000.</p></details>
+        <details><summary>¿Y si no me convence?</summary><p>Tienes 7 días de garantía. Escríbenos y te devolvemos el 100%.</p></details>
+      </div>
+
+      <div style="margin:26px 0 0"><button class="btn" data-buy>Quiero empezar mi reto →</button></div>
+    </div>
+  </div>
+
+  <footer>
+    © Tovlov · Matchmaking Humano<br>
+    <a href="terminos.html">Términos</a><a href="privacidad.html">Privacidad</a><a href="reembolso.html">Reembolsos</a><br><br>
+    Este sitio no forma parte de Facebook ni de Meta Platforms, Inc. El contenido es educativo y no sustituye atención psicológica profesional.
+  </footer>
+  <div class="sticky" id="sticky"><button class="btn" data-buy>Empezar mi reto · $<span data-p="front">197</span></button></div>
+</section>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+const F = window.FUNNEL || {};
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+
+/* ---------- Meta Pixel ---------- */
+function track(ev, data){ try{ if(window.fbq) fbq('track', ev, data||{}); }catch(e){} }
+if(F.metaPixelId){
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', F.metaPixelId); fbq('track','PageView');
+}
+
+/* ---------- Precios desde config ---------- */
+const P = Object.assign({front:197,bump:97}, F.prices||{});
+$$('[data-p]').forEach(el => el.textContent = P[el.dataset.p]);
+
+/* ---------- Preguntas ----------
+   Puntos: P = Perseguidora, E = Espera, I = Indiferente, M = Magnética, A = alarma (0–3) */
+const Q = [
+ {id:'edad', k:'Para personalizar tu resultado', t:'¿Cuántos años tienes?', o:[
+   {t:'18 a 24'},{t:'25 a 34'},{t:'35 a 44'},{t:'45 o más'} ]},
+ {id:'sit', k:'Tu momento', t:'¿Cuál se parece más a tu situación hoy?', o:[
+   {t:'Estoy saliendo con alguien y lo siento cada vez más frío', v:'enfria', ic:'🥶'},
+   {t:'Tengo pareja, pero lo siento lejos', v:'pareja', ic:'💔'},
+   {t:'Se alejó o terminamos hace poco', v:'alejo', ic:'🚪'},
+   {t:'Estoy soltera y siempre me pasa lo mismo', v:'soltera', ic:'🔁'} ]},
+ {id:'q1', k:'Pregunta 1', t:'Cuando él tarda horas en contestarte, tú…', o:[
+   {t:'Reviso si está en línea, releo la conversación y pienso qué hice mal', s:{P:3,A:3}},
+   {t:'Me digo que no importa… pero me arruina el día en silencio', s:{E:3,A:2}},
+   {t:'Le contesto igual de tarde. Que sienta lo mismo', s:{I:3,A:1}},
+   {t:'Sigo con mi día. Si le interesa, escribirá', s:{M:3}} ]},
+ {id:'q2', k:'Pregunta 2', t:'¿Quién sostiene las conversaciones y los planes?', o:[
+   {t:'Yo casi todo: escribo, propongo y doy seguimiento', s:{P:3,A:2}},
+   {t:'Espero a que él lo haga. Si no lo hace, no pasa nada', s:{E:3,A:1}},
+   {t:'Lo mínimo: no quiero que se sienta muy seguro', s:{I:3,A:1}},
+   {t:'Mitad y mitad. Si él deja de poner, yo también', s:{M:3}} ]},
+ {id:'q3', k:'Pregunta 3', t:'Cuando algo de él te molesta…', o:[
+   {t:'Se lo digo… en tres párrafos, a la 1 de la mañana', s:{P:3,A:3}},
+   {t:'Me lo trago para no arruinar las cosas', s:{E:3,A:2}},
+   {t:'Me alejo sin explicar. Que adivine', s:{I:3,A:1}},
+   {t:'Lo digo directo y con calma', s:{M:3}} ]},
+ {inter:1},
+ {id:'q4', k:'Pregunta 4', t:'Sales de una primera cita que fue increíble. Tu primera pregunta es…', o:[
+   {t:'“¿Le habré gustado? ¿Me va a escribir?”', s:{P:3,A:2}},
+   {t:'“¿Y si me ilusiono y sale mal otra vez?”', s:{E:3,A:2}},
+   {t:'“Ya veremos. No me voy a clavar”', s:{I:3,A:1}},
+   {t:'“¿Me gustó él?”', s:{M:3}} ]},
+ {id:'q5', k:'Pregunta 5', t:'Cuando un hombre te muestra interés claro y sano…', o:[
+   {t:'Me emociono muchísimo y doy todo de inmediato', s:{P:3,A:2}},
+   {t:'Desconfío: “algo debe de tener”', s:{E:3,A:2}},
+   {t:'Me aburre. Me atraen más los difíciles', s:{I:3,A:2}},
+   {t:'Lo recibo y le correspondo a su ritmo', s:{M:3}} ]},
+ {id:'q6', k:'Pregunta 6', t:'¿Qué tanto editas lo que sientes para no “espantarlo”?', o:[
+   {t:'Calculo cada mensaje… y aun así se me sale', s:{P:3,A:3}},
+   {t:'Muchísimo. Casi no muestro interés', s:{E:3,A:2}},
+   {t:'Juego a que me importa menos de lo que me importa', s:{I:3,A:2}},
+   {t:'Poco. Me muestro como soy', s:{M:3}} ]},
+ {id:'q7', k:'Pregunta 7', t:'Cuando él se enfría, ¿qué siente tu cuerpo?', h:'Tu cuerpo no miente. Responde con lo primero que sientas.', o:[
+   {t:'Opresión en el pecho. No duermo, no me concentro', s:{P:2,A:3}, ic:'🫀'},
+   {t:'Una tristeza pesada. Me apago', s:{E:2,A:2}, ic:'🌧️'},
+   {t:'Me endurezco. “Ya sabía que iba a pasar”', s:{I:2,A:2}, ic:'🧊'},
+   {t:'Me duele, pero sigo funcionando', s:{M:2}, ic:'🌿'} ]},
+ {inter:2},
+ {id:'el', k:'Sobre él', t:'Cuando las cosas van muy bien entre ustedes, él…', h:'Si ahora no hay nadie, piensa en tu última historia importante.', o:[
+   {t:'Se enfría o desaparece unos días', v:'evit'},
+   {t:'Va y viene: muy intenso y luego nada', v:'inter'},
+   {t:'Sigue igual de presente', v:'seguro'},
+   {t:'No sé, no lo tengo claro', v:'nose'} ]},
+ {id:'q8', k:'Pregunta 8', t:'Algo no cumple tu estándar, pero lo quieres. ¿Qué haces?', o:[
+   {t:'Aguanto, esperando que cambie', s:{P:3,A:2}},
+   {t:'Mejor ni empiezo algo, para no tener que terminarlo', s:{E:3,A:1}},
+   {t:'Termino rápido, antes de que me terminen', s:{I:3,A:2}},
+   {t:'Lo hablo, y si no cambia, me voy', s:{M:3}} ]},
+ {id:'tiempo', k:'Casi terminamos', t:'¿Cuánto tiempo llevas repitiendo esta historia?', o:[
+   {t:'Menos de un año'},{t:'De 1 a 3 años'},{t:'Más de 3 años'},{t:'Desde que tengo memoria'} ]},
+ {id:'meta', k:'Última pregunta', t:'¿Qué te gustaría sentir dentro de 21 días?', o:[
+   {t:'Paz: dejar de vivir pendiente del celular', v:'paz', ic:'🕊️'},
+   {t:'Claridad: entender qué pasa y qué hago yo', v:'claridad', ic:'🔎'},
+   {t:'Seguridad: una relación que se sienta estable', v:'seguridad', ic:'🏡'},
+   {t:'Libertad: dejar de atraer hombres no disponibles', v:'libertad', ic:'🦋'} ]},
+];
+const INTER = {
+ 1:`<div class="inter"><div class="qkick">Antes de seguir</div><h3>No eres intensa. Tu sistema de apego está en alarma.</h3>
+   <p>Cuando él tarda en contestar, tu cerebro no registra “está ocupado”: registra <b>amenaza</b>. Y dispara la respuesta completa: revisar, releer, escribir, recuperar la cercanía <i>ya</i>.</p>
+   <p>Ese sistema se calibró mucho antes de que pudieras opinar. La buena noticia: <b>se puede recalibrar.</b></p>
+   <div class="sig"><img src="assets/malka.jpg" alt="">— Malka</div><button class="btn" data-next>Continuar →</button></div>`,
+ 2:`<div class="inter"><div class="qkick">Así se ve el ciclo</div><h3>Por eso “no le escribas” nunca te ha funcionado</h3>
+   <div class="cycle"><div><b>1 · Él</b>se aleja un poco</div><div><b>2 · Tu alarma</b>se dispara</div><div><b>3 · Tú</b>persigues o te congelas</div><div><b>4 · Él</b>siente presión o muro… y se aleja más</div></div>
+   <p>Ese consejo ataca la conducta, no la alarma. Por eso te pide fingir una calma que tu cuerpo no siente. Ya casi tienes tu resultado.</p>
+   <button class="btn" data-next>Ver las últimas preguntas →</button></div>`
+};
+const TOTAL = Q.filter(q=>!q.inter).length;
+
+let idx = 0; const ans = {}; const hist = [];
+const show = id => { $$('.screen').forEach(s=>s.classList.remove('on')); $(id).classList.add('on'); window.scrollTo(0,0); };
+
+function render(){
+  const q = Q[idx];
+  const n = Q.slice(0, idx+1).filter(x=>!x.inter).length;
+  $('#qcount').textContent = q.inter ? 'Un momento' : `${n} de ${TOTAL}`;
+  $('#qbar').style.width = (Math.max(n-1,0)/TOTAL*100 + (q.inter?4:0)) + '%';
+  $('#qback').style.visibility = hist.length ? 'visible' : 'hidden';
+  const b = $('#qbody');
+  if(q.inter){
+    b.innerHTML = INTER[q.inter];
+    b.querySelector('[data-next]').onclick = next;
+  } else {
+    const L = 'ABCD';
+    b.innerHTML = `<div class="qkick">${q.k}</div><h2 class="qtitle">${q.t}</h2>${q.h?`<p class="qhelp">${q.h}</p>`:'<p class="qhelp"></p>'}
+      <div class="opts">${q.o.map((o,i)=>`<button class="opt${ans[q.id]===i?' sel':''}" data-i="${i}">${o.ic?`<span class="ic">${o.ic}</span>`:`<span class="k">${L[i]}</span>`}<span>${o.t}</span></button>`).join('')}</div>`;
+    b.querySelectorAll('.opt').forEach(btn => btn.onclick = () => {
+      b.querySelectorAll('.opt').forEach(x=>x.classList.remove('sel'));
+      btn.classList.add('sel'); ans[q.id] = +btn.dataset.i;
+      setTimeout(next, 260);
+    });
+  }
+  b.style.animation='none'; b.offsetHeight; b.style.animation='in .4s ease both';
+}
+function next(){ hist.push(idx); idx++; if(idx >= Q.length) return loading(); render(); }
+$('#qback').onclick = () => { if(!hist.length) return; idx = hist.pop(); render(); };
+$$('[data-start]').forEach(b => b.onclick = () => { show('#s-quiz'); render(); track('ViewContent',{content_name:'quiz_start'}); });
+
+/* ---------- Cálculo ---------- */
+function score(){
+  const t = {P:0,E:0,I:0,M:0,A:0}; let maxA = 0;
+  Q.forEach(q => { if(q.inter || ans[q.id]==null) return; const o = q.o[ans[q.id]];
+    if(q.o.some(x=>x.s)){ maxA += Math.max(...q.o.map(x=>(x.s&&x.s.A)||0)); }
+    if(o.s) for(const k in o.s) t[k]+=o.s[k]; });
+  const quads = ['P','E','I','M'].sort((a,b)=>t[b]-t[a]);
+  let base = quads[0];
+  const notM = ['P','E','I'].sort((a,b)=>t[b]-t[a]);
+  const escape = base==='M' ? notM[0] : notM.find(k=>k!==base);
+  const alarm = Math.round(t.A / (maxA||1) * 100);
+  const v = id => { const q=Q.find(x=>x.id===id); return q && ans[id]!=null ? q.o[ans[id]] : {}; };
+  return {t, base, escape, alarm, sit:v('sit').v, el:v('el').v, meta:v('meta').v, edad:v('edad').t, tiempo:v('tiempo').t};
+}
+
+/* ---------- Loading ---------- */
+function loading(){
+  show('#s-load');
+  const lis = $$('#steps li'); let p = 0;
+  const c = $('#ringc'), n = $('#ringn');
+  const iv = setInterval(()=>{
+    p += 2; c.style.strokeDashoffset = 327 - 327*p/100; n.textContent = p+'%';
+    lis.forEach((li,i)=>{ if(p > (i+1)*18) li.classList.add('done'); });
+    if(p>=100){ clearInterval(iv); setTimeout(()=>show('#s-lead'), 350); }
+  }, 70);
+}
+
+/* ---------- Lead ---------- */
+const NAMES = {P:'La Perseguidora',E:'La Espera',I:'La Indiferente',M:'Cerca de la Magnética'};
+let R = null, lead = {};
+$('#leadf').onsubmit = e => {
+  e.preventDefault();
+  const name = $('#fn').value.trim(), email = $('#fe').value.trim(), wa = $('#fw').value.trim();
+  if(!name) return $('#ferr').textContent = 'Escribe tu nombre.';
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return $('#ferr').textContent = 'Revisa tu correo, parece incompleto.';
+  if(!$('#fc').checked) return $('#ferr').textContent = 'Necesitamos tu permiso para enviarte el resultado.';
+  $('#ferr').textContent = '';
+  R = score(); lead = {name, email, whatsapp: wa};
+  try{ localStorage.setItem('tovlov_quiz', JSON.stringify({lead, R, at: Date.now()})); }catch(_){}
+  if(F.leadWebhook){
+    fetch(F.leadWebhook,{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,
+      body: JSON.stringify({...lead, cuadrante:NAMES[R.base], escape:NAMES[R.escape], alarma:R.alarm,
+        situacion:R.sit, el:R.el, meta:R.meta, edad:R.edad, tiempo:R.tiempo, puntos:R.t, origen:'quiz-por-que-se-aleja', url: location.href})
+    }).catch(()=>{});
+  }
+  track('Lead',{content_name:'quiz', content_category:NAMES[R.base]});
+  showResult();
+};
+
+/* ---------- Resultado ---------- */
+const PROF = {
+ P:{tag:'Haces que las cosas pasen… y terminas agotada.', feel:'PRESIÓN', feeltxt:'Lo que él termina sintiendo contigo, aunque no sepa explicarlo.',
+    why:'No se aleja porque valgas menos. Se aleja porque, sin darte cuenta, la relación se volvió un proyecto donde tú pones tres por cada uno que pone él. Lo que él siente es una deuda que crece, y casi nadie se queda a pagar una deuda.',
+    signs:['Escribes primero, propones el plan y confirmas la hora… y él solo “se deja querer”.','Tu humor del día depende de si contestó y de cómo contestó.','Cuando lo sientes lejos, haces más: más mensajes, más detalles, más esfuerzo.','Eres la fuerte de tu grupo. Por eso nadie imagina lo cansada que estás.']},
+ E:{tag:'Pareces sana. Pero estás coleccionando años de nada.', feel:'MURO', feeltxt:'Lo que él siente al intentar acercarse a ti.',
+    why:'Nadie lo diría: no persigues, no ruegas, “estás enfocada en ti”. Pero tu vida está diseñada para que nadie tenga que ver lo mucho que lo quieres. Él siente que escala a pulso una fortaleza que nunca baja el puente, y un día se cansa de escalar.',
+    signs:['Dices que estás abierta al amor, pero tu agenda no tiene un solo hueco para que pase.','Cuando alguien te gusta, lo escondes tan bien que él cree que no te interesa.','Te aplauden la postura (“así, mija, que él te busque”) mientras por dentro esperas.','Más que fracasos, coleccionas “casi algos” que nunca empezaron.']},
+ I:{tag:'Nadie te ve llorar. Nadie te ve, punto.', feel:'JUEGO', feeltxt:'Divertido un rato. Vacío después.',
+    why:'Aprendiste que mostrar interés sale caro, así que administras: contestas tarde, nunca te clavas, terminas antes de que te terminen. Por fuera vas ganando. Pero ningún hombre construye una vida sobre un tablero: se divierte un rato y se va, y tú te dices “ya sabía”.',
+    signs:['Los hombres sanos te aburren; los difíciles te encienden.','Confundes “no necesitar a nadie” con “no dejar entrar a nadie”.','Cuando alguien rompe tu blindaje, debajo aparece una perseguidora hambrienta.','Ganas el juego… y te quedas sola con el trofeo.']},
+ M:{tag:'Le importa, y no le urge… casi siempre.', feel:'CALIDEZ', feeltxt:'Lo que él siente contigo cuando estás en tu centro.',
+    why:'Tienes recursos reales de la Magnética: no persigues ni castigas, y sabes irte cuando algo no cumple. Pero tu resultado muestra una fuga: cuando llega alguien que de verdad te mueve, la alarma se enciende y saltas a otro cuadrante. Ahí es donde se te va.',
+    signs:['Con la mayoría estás tranquila; con “ese” pierdes el centro.','Sabes la teoría, pero bajo estrés tu cuerpo no la aplica.','Tu fuga aparece justo cuando más te importa la persona.','Tu trabajo no es cambiar: es blindar lo que ya tienes.']}
+};
+const SIT = {
+ enfria:'Y justo ahora, que lo sientes enfriarse, tu alarma está al máximo. Es el peor momento para decidir qué escribirle… y el mejor para cambiar el patrón.',
+ pareja:'Estar en pareja y sentirte sola es de las formas más cansadas de la ansiedad. La buena noticia: la dinámica cambia cuando una de las dos partes deja de jugar su papel.',
+ alejo:'Si se alejó hace poco, tu sistema está en modo emergencia. Antes de cualquier mensaje, necesitas apagar la alarma. Decidir desde el pánico casi siempre empeora las cosas.',
+ soltera:'Si siempre te pasa lo mismo con hombres distintos, el común denominador no es tu suerte: es la posición desde la que te vinculas. Y eso es exactamente lo que se puede cambiar.'
+};
+function showResult(){
+  show('#s-result');
+  const p = PROF[R.base];
+  $('#rname').textContent = `${lead.name}, tu cuadrante base es`;
+  $('#rtitle').textContent = NAMES[R.base];
+  $('#rtag').textContent = p.tag;
+  const order = ['P','E','I','M'];
+  $('#rquad').innerHTML = order.map(k=>`<div class="${k===R.base?'base':k===R.escape?'esc':''}">${k===R.base?'<span class="lbl">Tu base</span>':k===R.escape?'<span class="lbl">Tu escape</span>':''}<b>${NAMES[k].replace('Cerca de la ','La ')}</b>${({P:'persigue',E:'espera',I:'se protege',M:'elige'})[k]}</div>`).join('');
+  $('#ralarm').textContent = R.alarm;
+  setTimeout(()=>{ $('#rneedle').style.left = `calc(${R.alarm}% - 2px)`; }, 300);
+  $('#ralarmtxt').innerHTML = R.alarm>=66 ? '<b>Alarma alta.</b> Tu sistema vive en modo emergencia: cada silencio se siente como abandono. No es un defecto de carácter; es un sistema nervioso agotado, y es lo primero que trabajamos.'
+    : R.alarm>=36 ? '<b>Alarma intermitente.</b> Puedes estar bien semanas enteras… hasta que algo te detona y pierdes el centro. Aprender a apagar la alarma en el momento es tu siguiente paso.'
+    : '<b>Alarma baja.</b> Tienes buena base. Tu reto está en no perderla cuando llega alguien que de verdad te importa.';
+  $('#rfeel').textContent = p.feel; $('#rfeeltxt').textContent = p.feeltxt;
+  $('#rwhy').textContent = p.why;
+  $('#rsit').textContent = SIT[R.sit] || '';
+  $('#rsigns').innerHTML = p.signs.map(s=>`<li>${s}</li>`).join('') +
+    `<li><b>Tu cuadrante de escape es ${NAMES[R.escape].replace('Cerca de la ','La ')}:</b> cuando tu posición base se quema, brincas ahí. Por eso a veces sientes que eres “dos personas distintas” en el amor.</li>`;
+  $('#rtrap').style.display = (R.el==='evit'||R.el==='inter') ? 'block' : 'none';
+  track('ViewContent',{content_name:'quiz_result', content_category:NAMES[R.base]});
+  const io = new IntersectionObserver(es=>es.forEach(e=>$('#sticky').classList.toggle('show', !e.isIntersecting && window.scrollY>600)),{threshold:0});
+  io.observe($('#buy'));
+}
+
+/* ---------- VSL ---------- */
+$('#poster').onclick = () => {
+  if(!F.vslVimeoId){ toast('La VSL se conecta al pegar el ID de Vimeo en config.js'); return; }
+  $('#player').innerHTML = `<iframe src="https://player.vimeo.com/video/${F.vslVimeoId}?autoplay=1&title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+};
+
+/* ---------- Bump + compra ---------- */
+const upd = () => $('#tot').textContent = P.front + ($('#bump').checked ? P.bump : 0);
+$('#bump').onchange = upd;
+$$('[data-buy]').forEach(b => b.onclick = () => {
+  const bump = $('#bump').checked;
+  if(!document.querySelector('#buy').contains(b) && !b.closest('#buy')){
+    // Botones fuera de la caja: primero llevan a la caja de compra para ver el bump.
+    const box = $('#buy'); if(box.getBoundingClientRect().top > 80 || box.getBoundingClientRect().bottom < 0){ box.scrollIntoView({behavior:'smooth',block:'center'}); return; }
+  }
+  track('InitiateCheckout',{value: P.front + (bump?P.bump:0), currency:'MXN'});
+  if(!F.klazeUrl){ toast('Falta conectar el pago: pega la URL de Klaze en config.js'); return; }
+  const pr = F.products||{};
+  const u = new URL(F.klazeUrl.replace(/\/$/,'') + '/api/funnel/checkout');
+  u.searchParams.set('items', [pr.front].concat(bump?[pr.bump]:[]).join(','));
+  u.searchParams.set('next', new URL('upsell.html', location.href).href);
+  u.searchParams.set('cancel', location.href.split('#')[0] + '#oferta');
+  if(lead.email) u.searchParams.set('email', lead.email);
+  location.href = u.toString();
+});
+
+function toast(t){ const el=$('#toast'); el.textContent=t; el.style.display='block'; clearTimeout(el._t); el._t=setTimeout(()=>el.style.display='none',3200); }
+
+/* Atajo para revisar el diseño del resultado: index.html?demo=P|E|I|M */
+const demo = new URLSearchParams(location.search).get('demo');
+if(demo && PROF[demo]){ R = {t:{},base:demo,escape:demo==='P'?'I':'P',alarm:demo==='M'?28:78,sit:'enfria',el:'evit',meta:'paz'}; lead={name:'Daniela'}; showResult(); }
+})();
+</script>
+</body>
+</html>
